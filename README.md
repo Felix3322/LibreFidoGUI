@@ -108,11 +108,11 @@ gpg --verify SHA256SUMS.asc SHA256SUMS
 A new board (the whole image at 0x0; hold BOOT while plugging in):
 
 ```bash
-esptool --chip esp32s3 -p COM6 write-flash 0x0 librefido-2.2.4-esp32s3-standard-full.bin
+esptool --chip esp32s3 -p COM6 write-flash 0x0 librefido-2.2.5-esp32s3-standard-full.bin
 # 4 MB module:
 esptool --chip esp32s3 -p COM6 write-flash 0x0 librefido-2.2.2-esp32s3-4mb-standard-full.bin
 # AtomS3U (8 MB hardware, existing 4 MB layout, GPIO41):
-esptool --chip esp32s3 -p COM6 write-flash --flash-size 4MB 0x0 librefido-2.2.4-atoms3u-4mb-standard-full.bin
+esptool --chip esp32s3 -p COM6 write-flash --flash-size 4MB 0x0 librefido-2.2.5-atoms3u-4mb-standard-full.bin
 ```
 
 Confirmations (imports, profile changes, updates, ...) wait 30 s for a press
@@ -128,7 +128,7 @@ A board that already runs LibreFido 2 (A/B update, keys and settings kept,
 rollback possible):
 
 ```bash
-librefido firmware update librefido-2.2.4-esp32s3-standard-app.bin
+librefido firmware update librefido-2.2.5-esp32s3-standard-app.bin
 ```
 
 Build it yourself (ESP-IDF 5.5):
@@ -177,7 +177,7 @@ librefido firmware update build/pico_fido2.bin
 Install the tools and look at the device:
 
 ```bash
-pip install "./tools/librefido[gui]"
+pip install ./tools/librefido
 librefido info
 librefido-gui
 ```

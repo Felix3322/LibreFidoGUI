@@ -519,7 +519,7 @@ device.
 单个密钥的导出和导入需要固件 2.1.0 与 librefido-tools 2.1.0：
 
 ```bash
-pip install "./tools/librefido[gui]"     # 读取二维码图片另需 "./tools/librefido[qr]"
+pip install ./tools/librefido           # 读取二维码图片另需 "./tools/librefido[qr]"
 ```
 
 几条规则：

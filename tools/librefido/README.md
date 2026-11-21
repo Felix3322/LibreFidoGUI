@@ -8,7 +8,7 @@ Windows, unlike raw FIDO HID access).
 > on a LibreFido key.
 
 ```bash
-pip install "./tools/librefido[gui]"     # PySide6 for the GUI
+pip install ./tools/librefido           # PySide6 (the GUI) included
 librefido-gui                            # English or Chinese (system locale, LIBREFIDO_LANG=zh)
 librefido --help
 ```
